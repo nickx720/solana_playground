@@ -1,4 +1,4 @@
-# Todo Program Derived Addresses (PDAs) Part 1
+# Todo processor.rs Part 1, Rent Part 1, starting to process the InitEscrow instruction
 
 ```https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/```
 
@@ -105,5 +105,11 @@ Using token programs
 **Where is all solana internal account information stored?**
 
 Fields on the account
+
+---
+
+**What is sysvars?**
+
+Solana has sysvars, which are parameters of the Solana cluster you are on. It can be accessed through accounts and store parameters such as what the current fee or rent is. As of solana-program `1.6.5`, can be accessed without being passed into entrypoint as an account.
 
 ---
