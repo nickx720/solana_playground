@@ -1,4 +1,4 @@
-# Todo processor.rs Part 1, Rent Part 1, starting to process the InitEscrow instruction
+# Todo state.rs
 
 ```https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/```
 
@@ -111,5 +111,17 @@ Fields on the account
 **What is sysvars?**
 
 Solana has sysvars, which are parameters of the Solana cluster you are on. It can be accessed through accounts and store parameters such as what the current fee or rent is. As of solana-program `1.6.5`, can be accessed without being passed into entrypoint as an account.
+
+---
+
+**What is Rent sysvar?**
+
+Rent is deducted from an account's balance according to their space requirements.
+
+---
+
+**What happens when balance goes to zero for non rent-exampet accounts?**
+
+The accounts disappear.
 
 ---
