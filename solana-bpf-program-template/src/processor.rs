@@ -8,7 +8,7 @@ use solana_program::{
     sysvar::{rent::Rent, Sysvar},
 };
 
-use crate::{error::EscrowError, instruction::EscrowInstruction};
+use crate::{error::EscrowError, instruction::EscrowInstruction, state::Escrow};
 
 pub struct Processor;
 impl Processor {
@@ -49,12 +49,12 @@ impl Processor {
         let escrow_account = next_account_info(account_info_iter)?;
         let rent = &Rent::from_account_info(next_account_info(account_info_iter)?)?;
 
-        if !rent.is_exempt(escrow_account.lamports(),escrow_account.data_len()) {
+        if !rent.is_exempt(escrow_account.lamports(), escrow_account.data_len()) {
             return Err(EscrowError::NotRentExampt.into());
         }
 
         let mut escrow_info = Escrow::unpack_unchecked(&escrow_account.data.borrow())?;
-        if escrow_info.is_initialized(){
+        if escrow_info.is_initialized() {
             return Err(ProgramError::AccountAlreadyInitialized);
         }
         Ok(())

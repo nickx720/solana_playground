@@ -1,4 +1,4 @@
-# Todo state.rs
+# Todo Processor Part 2, PDAs Part 2, CPIs Part 1
 
 ```https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/```
 
@@ -123,5 +123,11 @@ Rent is deducted from an account's balance according to their space requirements
 **What happens when balance goes to zero for non rent-exampet accounts?**
 
 The accounts disappear.
+
+---
+
+**Can any accounts be passed into the entrypoint? Different ones from those defined inside the API(instruction.rs)?**
+
+Yes and it is the program's /programmer responsibility to check that `received accounts == expected accounts`
 
 ---

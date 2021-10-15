@@ -8,7 +8,7 @@ pub enum EscrowError {
     #[error("Invalid Instruction")]
     InvalidInstruction,
     #[error("Not Rent Exampt")]
-    NotRentExampt
+    NotRentExampt,
 }
 
 impl From<EscrowError> for ProgramError {
