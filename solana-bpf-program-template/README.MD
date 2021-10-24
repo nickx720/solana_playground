@@ -1,4 +1,4 @@
-# Todo Processor Part 2, PDAs Part 2, CPIs Part 1
+# Todo Trying out the program,understanding Alice's transaction
 
 ```https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/```
 
